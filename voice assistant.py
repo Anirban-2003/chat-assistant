@@ -1,7 +1,7 @@
 import pyttsx3
 import openai
 
-openai.api_key = "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"
+openai.api_key = "###"
 user_input=input()
 
 messages = [{"role": "system", "content": "chatbot"}]
