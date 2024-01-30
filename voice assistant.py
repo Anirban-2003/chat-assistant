@@ -13,6 +13,7 @@ for _ in range(5):
     )
     ChatGPT_reply = response["choices"][0]["message"]["content"]
     messages.append({"role": "assistant", "content": ChatGPT_reply})
+    
     text_speech = pyttsx3.init()
     text_speech.say(ChatGPT_reply)
     print(ChatGPT_reply)
