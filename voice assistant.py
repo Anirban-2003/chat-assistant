@@ -4,8 +4,10 @@ import pyttsx3
 openai.api_key = "###"
 
 messages = [{"role": "system", "content": "chatbot"}]
-for _ in range(5):
+while(1):
     user_input=input()
+    if user_input=="stop":
+        break
     messages.append({"role": "user", "content": user_input})
     response = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
